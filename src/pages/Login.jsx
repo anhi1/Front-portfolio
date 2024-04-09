@@ -7,7 +7,7 @@ export default function Login() {
     <div className="flex h-[calc(100vh-100px)] items-center justify-center">
     <div className="w-full max-w-xs">
       <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-      <h1 className="text-2xl font-bold">Login</h1>
+      <h1 className="text-2xl font-bold">Admin</h1>
        
         <input
           type="email"

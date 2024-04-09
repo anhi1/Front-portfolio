@@ -17,9 +17,9 @@ export default function Contact() {
             placeholder="Email"
           />
           <textarea
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-4"
+            className="shadow appearance-none border rounded w-full py-5 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-4"
             placeholder="Mensaje"
-          ></textarea>
+          />
           <button
             type="submit"
             className="bg-indigo-500 hover:bg-indigo-300 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline my-2"
