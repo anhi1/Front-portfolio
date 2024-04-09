@@ -4,6 +4,9 @@ npm run dev
 # Instalacion
 npm create vite@latest
 
+# ruteo
+npm i react-router-dom
+
 # Test
 npm install -D vitest
 npm i -D jsdom @testing-library/react
