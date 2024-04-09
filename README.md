@@ -1,18 +1,19 @@
-# Ejecutar
+# FRONT-END
+## Ejecutar
 npm run dev
 
-# Instalacion
+## Instalacion
 npm create vite@latest
 
-# ruteo
+## ruteo
 npm i react-router-dom
 
-# Test
+## Test
 npm install -D vitest
 npm i -D jsdom @testing-library/react
 Añadir en package.json "test": "vitest" y ejecutar npm run test
 
-# Tailwind
+## Tailwind
 
 - npm install -D tailwindcss postcss autoprefixer
 - npx tailwindcss init -p
@@ -21,3 +22,7 @@ Añadir en package.json "test": "vitest" y ejecutar npm run test
 @tailwind components;
 @tailwind utilities;
 - Ejemplo de componentes: https://tailwindcomponents.com/component/search-input
+
+
+## Form-validaciones
+npm install react-hook-form
