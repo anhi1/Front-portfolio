@@ -2,9 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
 body {
   font-family: 'Bricolage Grotesque', sans-serif;
+  background-color: #ececec;
+  
 }
+
+
 /* 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
