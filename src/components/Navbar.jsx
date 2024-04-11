@@ -2,21 +2,21 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="bg-white flex justify-between py-5 px-10 mb-4">
-      <ul className="flex gap-x-2">
+    <nav className="bg-white flex flex-col md:flex-row justify-between py-5 px-10 mb-4">
+      <ul className="flex flex-col md:flex-row gap-x-2 md:gap-x-4">
         <li className="inline-flex items-center gap-x-2 text-sm font-medium rounded-lg">
           <Link to="/proyect">Proyectos</Link>
         </li>
 
-        <li >
+        <li className="inline-flex items-center gap-x-2 text-sm font-medium rounded-lg" >
           <Link to="/about">Sobre mí</Link>
         </li>
 
-        <li>
+        <li className="inline-flex items-center gap-x-2 text-sm font-medium rounded-lg">
           <Link to="/contact">Contacto</Link>
         </li>
 
-        <li>
+        <li className="inline-flex items-center gap-x-2 text-sm font-medium rounded-lg">
           <Link to="/login">Admin</Link>
         </li>
 
