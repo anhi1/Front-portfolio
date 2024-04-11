@@ -13,42 +13,55 @@ export default function Contact() {
   };
   return (
     <div className="flex h-[calc(100vh-100px)] items-center justify-center">
-      <div className="w-full max-w-xs">
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+      <div className="w-full max-w-xl">
+        <form onSubmit={handleSubmit(onSubmit)} className="px-8 pt-6 pb-8 mb-4 form-border"
         >
-          <h1 className="text-2xl font-bold">Contacto</h1>
+          <h1 className="text-6xl font-bold mb-3">Contacto</h1>
+
+          
+        <div className="mb-4">
+        <label htmlFor="username" className="block text-gray-700 text-sm font-bold mb-2">Nombre</label>
           <input
             type="text"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2"
+            className="shadow appearance-none border rounded w-full px-4 py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="Username"
+            style={{ backgroundColor: '#EAEAEA' }}
             {...register("username", { required: true })}
           />
           {errors.username && (
             <span className="text-red-500">Campo requerido</span>
           )}
-
+        </div>
+          
+        <div className="mb-4">
+        <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">Email</label>
           <input
             type="email"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2"
+            className="shadow appearance-none border rounded w-full px-4 py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline "
             placeholder="Email"
+            style={{ backgroundColor: '#EAEAEA' }}
             {...register("email", { required: true })}
           />
           {errors.email && <p className="text-red-500">email is required</p>}
+        </div>  
 
+        <div className="mb-4">
+          <label htmlFor="mensaje" className="block text-gray-700 text-sm font-bold mb-2">Mensaje</label>
           <textarea
-            className="shadow appearance-none border rounded w-full py-5 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-2 mb-2"
+            className="shadow appearance-none border rounded w-full px-4 py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="Mensaje"
+            style={{ backgroundColor: '#EAEAEA' }}
             {...register("message", { required: true })}
           />
           {errors.message && (
             <span className="text-red-500">Campo requerido</span>
           )}
+          </div>
 
           <button
             type="submit"
-            className="bg-indigo-500 w-full hover:bg-indigo-300 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline my-2"
+            style={{ backgroundColor: "#2C2D30", borderRadius: "0.4rem"}}
+            className="text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline my-2"
           >
             Enviar
           </button>

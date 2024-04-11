@@ -39,10 +39,10 @@ export default function ProyectFormPage() {
   ];
 
   return (
-    <div className="flex h-[calc(100vh-100px)] items-center justify-center">
-      <div className="w-full max-w-lg ">
-        <form className=" px-8 pt-6 pb-8 mb-4 mt-12 form-border">
-          <h1 className="text-6xl font-bold my-2">Proyecto</h1>
+    <div className="flex flex-col h-[calc(100vh-100px)] justify-between items-center">
+      <div className="w-full max-w-xl ">
+        <form className=" px-8 pt-6 pb-8 mb-4 form-border">
+          <h1 className="text-6xl font-bold mb-3">Proyecto</h1>
 
           <div className="mb-4">
           <label htmlFor="title" className="block text-gray-700 text-sm font-bold mb-2">Título</label>
@@ -156,9 +156,8 @@ export default function ProyectFormPage() {
           </div>
         <div>
           <button type="submit"
-          style={{ backgroundColor: "#2C2D30" }}
-            className="  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline my-2"
-          >
+          style={{ backgroundColor: "#2C2D30", borderRadius: "0.4rem"}}
+          className="text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline my-2">
             Guardar
           </button>
           </div>
