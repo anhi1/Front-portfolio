@@ -39,7 +39,7 @@ export default function ProyectFormPage() {
   ];
 
   return (
-    <div className="flex flex-col h-[calc(100vh-100px)] justify-between items-center">
+    <div className="flex flex-col justify-between items-center mt-8">
       <div className="w-full max-w-xl ">
         <form className=" px-8 pt-6 pb-8 mb-4 form-border shadow-md">
           <h1 className="text-6xl font-bold mb-3">Proyecto</h1>

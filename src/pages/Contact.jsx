@@ -12,7 +12,7 @@ export default function Contact() {
     console.log(data);
   };
   return (
-    <div className="flex h-[calc(100vh-100px)] items-center justify-center">
+    <div className="flex mt-8 items-center justify-center">
       <div className="w-full max-w-xl">
         <form onSubmit={handleSubmit(onSubmit)} className="px-8 pt-6 pb-8 mb-4 form-border shadow-md"
         >
