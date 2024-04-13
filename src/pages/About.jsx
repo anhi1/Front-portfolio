@@ -25,11 +25,11 @@ export default function About() {
             </p>
           </blockquote>
           <figcaption className="mt-10">
-            <img
+            {/* <img
               className="mx-auto h-10 w-10 rounded-full"
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+              src=""
               alt=""
-            />
+            /> */}
             <div className="mt-4 flex items-center justify-center space-x-3 text-base">
               <div className="font-semibold text-gray-900">Annie</div>
               <svg

@@ -24,8 +24,10 @@ Añadir en package.json "test": "vitest" y ejecutar npm run test
 - Ejemplo de componentes: https://tailwindcomponents.com/component/search-input
 
 
-## Form-validaciones
+## instalacion
 npm install react-hook-form
+npm i axios
+npm i js-cookie
 
 
 
