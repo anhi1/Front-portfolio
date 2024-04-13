@@ -45,7 +45,7 @@ function Navbar() {
         } md:flex flex-col md:flex-row gap-x-2 md:gap-x-4`}
       >
         <li className="inline-flex items-center gap-x-2 text-sm font-medium rounded-lg mb-2">
-          <Link to="/proyect">Proyectos</Link>
+          <Link to="/project">Proyectos</Link>
         </li><br></br>
         <li className="inline-flex items-center gap-x-2 text-sm font-medium rounded-lg mb-2">
           <Link to="/about">Sobre mí</Link>
@@ -53,12 +53,10 @@ function Navbar() {
         <li className="inline-flex items-center gap-x-2 text-sm font-medium rounded-lg mb-2">
           <Link to="/contact">Contacto</Link>
         </li><br></br>
-        <li className="inline-flex items-center gap-x-2 text-sm font-medium rounded-lg mb-2">
-          <Link to="/login">Admin</Link>
-        </li>
+      
         <li>
           <Link
-            to="/add-proyect"
+            to="/add-project"
             className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 mb-2"
           >
             Agregar proyecto

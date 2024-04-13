@@ -1,7 +1,7 @@
 import React from "react"
 import { useState } from "react"
 
-export default function ProyectFormPage() {
+export default function ProjectFormPage() {
 
   const [image, setImage] = useState(null);
   const handleImageChange = (event) => {
