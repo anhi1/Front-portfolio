@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useProjects } from "../context/ProjectsContext";
-
 import ProjectCard from "../components/ProyectCard";
 
 function ProjectsPage() {

@@ -7,11 +7,10 @@ function Navbar() {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-  
 
   return (
     <nav className="bg-white flex flex-col md:flex-row justify-between py-5 px-10">
-      <Link to='/' className="flex flex-col md:flex-row md:gap-x-4 mb-2">
+      <Link to="/" className="flex flex-col md:flex-row md:gap-x-4 mb-2">
         <img
           className="inline-flex items-center"
           src="public/logo.svg"
@@ -21,7 +20,10 @@ function Navbar() {
       </Link>
 
       <div className="md:hidden">
-      <button onClick={toggleMenu} className="md:hidden absolute right-0 top-0 p-4">
+        <button
+          onClick={toggleMenu}
+          className="md:hidden absolute right-0 top-0 p-4"
+        >
           <svg
             className="w-6 h-6"
             fill="none"
@@ -45,15 +47,18 @@ function Navbar() {
         } md:flex flex-col md:flex-row gap-x-2 md:gap-x-4`}
       >
         <li className="inline-flex items-center gap-x-2 text-sm font-medium rounded-lg mb-2">
-          <Link to="/project">Proyectos</Link>
-        </li><br></br>
+          <Link to="/projects">Proyectos</Link>
+        </li>
+        <br></br>
         <li className="inline-flex items-center gap-x-2 text-sm font-medium rounded-lg mb-2">
           <Link to="/about">Sobre mí</Link>
-        </li><br></br>
+        </li>
+        <br></br>
         <li className="inline-flex items-center gap-x-2 text-sm font-medium rounded-lg mb-2">
           <Link to="/contact">Contacto</Link>
-        </li><br></br>
-      
+        </li>
+        <br></br>
+
         <li>
           <Link
             to="/add-project"
