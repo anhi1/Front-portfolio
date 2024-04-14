@@ -29,6 +29,9 @@ npm install react-hook-form
 npm i axios
 npm i js-cookie
 
+# instalacion three.js
+npm install three
+
 
 
 drgadacion
