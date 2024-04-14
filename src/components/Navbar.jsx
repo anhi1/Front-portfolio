@@ -11,7 +11,7 @@ function Navbar() {
 
   return (
     <nav className="bg-white flex flex-col md:flex-row justify-between py-5 px-10">
-      <Link className="flex flex-col md:flex-row md:gap-x-4 mb-2">
+      <Link to='/' className="flex flex-col md:flex-row md:gap-x-4 mb-2">
         <img
           className="inline-flex items-center"
           src="public/logo.svg"

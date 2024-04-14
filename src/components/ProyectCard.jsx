@@ -1,6 +1,8 @@
 import {useProjects} from "../context/ProjectsContext"
 import { Link } from "react-router-dom";
 export default function ProjectCard() {
+
+  const {deleteProject} = useProjects();
   return (
     <div className="bg-white shadow rounded-lg max-w-md w-full p-10">
       <header className="flex justify-between">

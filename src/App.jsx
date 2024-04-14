@@ -7,12 +7,14 @@ import About from "./pages/About";
 import Navbar from "./components/Navbar";
 import ProjectFormPage from "./pages/ProjectFormPage";
 import ProjectsPage from "./pages/ProjectsPage";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
+        <Route path="/" element={<HomePage/>}/>
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/about" element={<About />} />
