@@ -1,9 +1,11 @@
+// import Contact from './Contact'
+// import About from "./About";
 
 export default function HomePage() {
   return (
-    <div>HomePage
+    <>HomePage
         {/* <About/>
         <Contact/> */}
-    </div>
+    </>
   )
 }
