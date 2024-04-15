@@ -1,6 +1,9 @@
 import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+// import { TTFLoader } from 'three/examples/jsm/loaders/TTFLoader';
+// import { FontLoader } from 'three/examples/jsm/Addons.js';
+// import { TextGeometry } from 'three/examples/jsm/Addons.js';
 
 const ObjetoUno = () => {
     const mountRef = useRef(null);
@@ -12,6 +15,7 @@ const ObjetoUno = () => {
         const scene = new THREE.Scene();
         scene.background = new THREE.Color(0x2c2d30);
         const camera = new THREE.PerspectiveCamera(15, width / height, 0.01, 1000);
+        scene.fog = new THREE.Fog(0x000000, 10, 40)
         scene.add(camera);
         camera.position.z = 6;
         camera.position.x = 6;
@@ -21,8 +25,30 @@ const ObjetoUno = () => {
         currentRef.appendChild(renderer.domElement);
 
         const controls = new OrbitControls(camera, renderer.domElement)
+        controls.maxPolarAngle= Math.PI;
+        controls.screenSpacePanning = true;
         controls.enableDamping = true;
         controls.enableZoom = false; // Desactivar el zoom
+
+        // //font
+        // const fontLoader = new FontLoader();
+        // const ttfLoader = new TTFLoader();
+        // ttfLoader.load('font/BricolageGrotesque_24pt-ExtraBold.ttf', (json) => {
+        //   // First parse the font.
+        //   const bricolageFont = fontLoader.parse(json);
+        //   // Use parsed font as normal.
+        //   const textGeometry = new TextGeometry('hello world', {
+        //     height: 2,
+        //     size: 10,
+        //     font: bricolageFont,
+        //   });
+        //   const textMaterial = new THREE.MeshNormalMaterial();
+        //   const textMesh = new THREE.Mesh(textGeometry, textMaterial);
+        //   textMesh.position.x = -46;
+        //   textMesh.position.y = -10;
+        //   test.scene.add(textMesh);
+        // });
+      
 
         
         const geometry = new THREE.BoxGeometry(1,1,1); // dimensiones x,y,z
@@ -56,12 +82,14 @@ const ObjetoUno = () => {
         }
 
     }, []);
+    
 
     return (
         <div ref={mountRef} style={{ width: '100%', height: '100vh' }}>
-            
+           
         </div>
     );
 }
+
 
 export default ObjetoUno;

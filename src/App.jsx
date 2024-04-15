@@ -8,14 +8,14 @@ import Navbar from "./components/Navbar";
 import ProjectFormPage from "./pages/ProjectFormPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import HomePage from "./pages/HomePage";
-import ObjetoUno from "./pages/ObjetoUno"
+// import ObjetoUno from "./pages/ObjetoUno"
 
 function App() {
   return (
     <ProjectProvider>
     <BrowserRouter>
       <Navbar />
-      <ObjetoUno/>
+      
       <Routes>
         <Route path="/" element={<HomePage/>}/>
         <Route path="/about" element={<About />} />
