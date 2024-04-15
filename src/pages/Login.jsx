@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import ObjetoDos from "./ObjetoDos";
 
 export default function Login() {
   const {
@@ -12,6 +13,8 @@ export default function Login() {
   });
 
   return (
+    <>
+<div className="absolute top-30 left-20 md:top-20 md:left-100 mt-20">
     <div className="flex mt-8 items-center justify-center">
       <div className="w-full max-w-xs">
         <form onSubmit={onSubmit} className="bg-white  rounded px-8 pt-6 pb-8 mb-4 form-border shadow-md">
@@ -41,7 +44,12 @@ export default function Login() {
             Enviar
           </button>
         </form>
+        
       </div>
+      
     </div>
+    </div>
+    <ObjetoDos/>
+    </>
   );
 }
