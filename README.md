@@ -31,6 +31,8 @@ npm i js-cookie
 
 # instalacion three.js
 npm install three
+npm install three stats.js
+
 
 
 

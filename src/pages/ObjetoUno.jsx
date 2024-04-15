@@ -1,9 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-// import { TTFLoader } from 'three/examples/jsm/loaders/TTFLoader';
-// import { FontLoader } from 'three/examples/jsm/Addons.js';
-// import { TextGeometry } from 'three/examples/jsm/Addons.js';
+
 
 const ObjetoUno = () => {
     const mountRef = useRef(null);
@@ -30,25 +28,7 @@ const ObjetoUno = () => {
         controls.enableDamping = true;
         controls.enableZoom = false; // Desactivar el zoom
 
-        // //font
-        // const fontLoader = new FontLoader();
-        // const ttfLoader = new TTFLoader();
-        // ttfLoader.load('font/BricolageGrotesque_24pt-ExtraBold.ttf', (json) => {
-        //   // First parse the font.
-        //   const bricolageFont = fontLoader.parse(json);
-        //   // Use parsed font as normal.
-        //   const textGeometry = new TextGeometry('hello world', {
-        //     height: 2,
-        //     size: 10,
-        //     font: bricolageFont,
-        //   });
-        //   const textMaterial = new THREE.MeshNormalMaterial();
-        //   const textMesh = new THREE.Mesh(textGeometry, textMaterial);
-        //   textMesh.position.x = -46;
-        //   textMesh.position.y = -10;
-        //   test.scene.add(textMesh);
-        // });
-      
+       
 
         
         const geometry = new THREE.BoxGeometry(1,1,1); // dimensiones x,y,z
