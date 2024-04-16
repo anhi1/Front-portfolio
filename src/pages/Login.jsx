@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import ObjetoDos from "./ObjetoDos";
 
+
 export default function Login() {
   const {
     register,
@@ -9,7 +10,7 @@ export default function Login() {
     formState: { errors },
   } = useForm();
   const onSubmit = handleSubmit((data) => {
-    login(data);
+    Login(data);
   });
 
   return (

@@ -46,7 +46,7 @@ export default function Contact() {
         </div>  
 
         <div className="mb-4">
-          <label htmlFor="mensaje" className="block text-gray-700 text-sm font-bold mb-2">Mensaje</label>
+          <label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2">Mensaje</label>
           <textarea
             className="shadow appearance-none border rounded w-full px-4 py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="Mensaje"
