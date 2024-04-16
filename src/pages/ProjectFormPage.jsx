@@ -7,7 +7,7 @@ import { useEffect, useState  } from "react";
 export default function ProjectFormPage() {
 
   const { register, handleSubmit, setValue} = useForm(); // metodos:  set value, ...
-  const {createTask, getTask, updateTask} = useProjects();
+  const {createProject, getProject, updateProject} = useProjects();
   const navigate = useNavigate();
   const params = useParams();
 
@@ -65,12 +65,12 @@ export default function ProjectFormPage() {
      };
  
      if(params.id){
-       updateTask(params.id, {
+       updateProject(params.id, {
        ...data,
       
      }); 
      }else{
-       createTask({
+       createProject({
        ...data,
       
      });

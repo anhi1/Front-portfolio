@@ -24,7 +24,7 @@ function RegisterPage() {
   return (
     <div className="flex h-[calc(100vh-100px)] items-center justify-center">
     <div className="w-full max-w-xs">
-      {registerErrors.map((error, i) => (
+    {registerErrors.map((error, i) => (
         <div className="bg-red-500 p-2 text-white" key={i}>
           {error}
         </div>
