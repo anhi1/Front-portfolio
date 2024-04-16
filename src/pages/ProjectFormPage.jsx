@@ -82,7 +82,7 @@ export default function ProjectFormPage() {
         <div className="mb-4">
           <label htmlFor="images" className="block text-gray-700 text-sm font-bold mb-2">Subir imágenes</label>
           <input
-            id="images"
+            id="imageUpload"
             type="file"
             accept="image/*"
             multiple

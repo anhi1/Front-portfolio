@@ -33,7 +33,7 @@ export function ProjectProvider({children}){
    const deleteProject = async (id) => {
     try {
      const res = await deleteProjectRequest(id);
-     if(res.status === 204) setProjects(Projects.filter(Project=>Project._id !== id )) //crea un arreglo nuevo
+     if(res.status === 204) setProjects(projects.filter(project=>project._id !== id )) //crea un arreglo nuevo
     } catch (error) {
      console.log(error);
     }
