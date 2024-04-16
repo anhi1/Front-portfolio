@@ -24,11 +24,13 @@ export const AuthProvider = ({ children }) => {// emgloba a otros
 
   const signin = async (user) => {
     try {
+      console.log("Iniciando sesión con usuario:", user);
       const res = await loginRequest(user);
-      console.log(res);
+      console.log("Respuesta del servidor:", res);
       setIsAuthenticated(true);
       setUser(res.data);
     } catch (error) {
+      console.error("Error al iniciar sesión:", error);
       if (Array.isArray(error.response.data)) {
         return setErrors(error.response.data);
       }
@@ -53,23 +55,23 @@ export const AuthProvider = ({ children }) => {// emgloba a otros
 
   useEffect(() => {
     async function checkLogin() {
-      const cookies = Cookies.get();
-
-      if (!cookies.token) {
+      const token = Cookies.get("token"); // Obtener el token de la cookie "token"
+  
+      if (!token) {
         setIsAuthenticated(false);
         setLoading(false);
         return setUser(null);
       }
-
+  
       try {
-        const res = await verityTokenRequest(cookies.token);
+        const res = await verityTokenRequest(token); // Pasar el token en lugar de cookies.token
         console.log(res);
         if (!res.data) {
           setIsAuthenticated(false);
           setLoading(false);
           return;
         }
-
+  
         setIsAuthenticated(true);
         setUser(res.data);
         setLoading(false);

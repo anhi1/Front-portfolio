@@ -1,17 +1,27 @@
-import React from "react";
+
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import ObjetoDos from "./ObjetoDos";
+import { useAuth } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 
-export default function Login() {
+export default function LoginPage() {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const {signin, isAuthenticated} = useAuth();
+  const navigate = useNavigate();
+
   const onSubmit = handleSubmit((data) => {
-    Login(data);
+    signin(data);
   });
+
+  useEffect(()=>{
+    if(isAuthenticated) navigate('/projects')
+   }, [isAuthenticated]);
 
   return (
     <>
