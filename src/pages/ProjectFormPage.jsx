@@ -1,7 +1,15 @@
-import React from "react"
-import { useState } from "react"
+import { useForm } from "react-hook-form";
+import { useProjects } from "../context/ProjectsContext";
+import { useNavigate, useParams } from "react-router-dom";
+import { useEffect, useState  } from "react";
+
 
 export default function ProjectFormPage() {
+
+  const { register, handleSubmit, setValue} = useForm(); // metodos:  set value, ...
+  const {createTask, getTask, updateTask} = useProjects();
+  const navigate = useNavigate();
+  const params = useParams();
 
   const [image, setImage] = useState(null);
   const handleImageChange = (event) => {
@@ -38,15 +46,48 @@ export default function ProjectFormPage() {
     "three.js",
   ];
 
+  useEffect(()=>{
+    async function  loadProject() {
+       if(params.id){
+         const task = await getProject(params.id);
+         console.log(task);
+         setValue('title', project.title)
+         setValue('description', project.description)
+       }
+     }
+     loadProject()
+   },[])
+ 
+   const onSubmit = handleSubmit((data)=>{
+     const dataValid = {
+       ...data,
+     
+     };
+ 
+     if(params.id){
+       updateTask(params.id, {
+       ...data,
+      
+     }); 
+     }else{
+       createTask({
+       ...data,
+      
+     });
+   }
+     navigate('/projects');
+   });
+
   return (
     <div className="flex flex-col justify-between items-center mt-8">
       <div className="w-full max-w-xl ">
-        <form className=" px-8 pt-6 pb-8 mb-4 form-border shadow-md">
+        <form onSubmit={onSubmit} className=" px-8 pt-6 pb-8 mb-4 form-border shadow-md">
           <h1 className="text-6xl font-bold mb-3">Proyecto</h1>
 
           <div className="mb-4">
           <label htmlFor="title" className="block text-gray-700 text-sm font-bold mb-2">Título</label>
           <input
+          {...register("title")}
             type="text"
             id="title"
             placeholder="Title"
@@ -59,6 +100,7 @@ export default function ProjectFormPage() {
         <div className="mb-4">
           <label htmlFor="description" className="block text-gray-700 text-sm font-bold mb-2">Descripción</label>
           <textarea
+          {...register("description")}
             id="description"
             rows="3"
             placeholder="Description"
@@ -70,6 +112,7 @@ export default function ProjectFormPage() {
         <div className="mb-4">
           <label htmlFor="url" className="block text-gray-700 text-sm font-bold mb-2">URL</label>
           <input
+          {...register("url")}
             type="text"
             id="url"
             name="url"
@@ -80,11 +123,13 @@ export default function ProjectFormPage() {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="images" className="block text-gray-700 text-sm font-bold mb-2">Subir imágenes</label>
+          <label htmlFor="imageUpload" className="block text-gray-700 text-sm font-bold mb-2">Subir imágenes</label>
           <input
+          {...register("images")}
             id="imageUpload"
             type="file"
             accept="image/*"
+            name="images"
             multiple
             onChange={handleImageChange}
             className="w-full  text-black py-2 rounded-md "

@@ -10,6 +10,8 @@ import Navbar from "./components/Navbar";
 import ProjectFormPage from "./pages/ProjectFormPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import HomePage from "./pages/HomePage";
+import ProfilePage from "./pages/ProfilePage";
+import ProtectedRoute from "./ProtectedRoute";
 
 
 function App() {
@@ -24,12 +26,13 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+       
+        <Route element={<ProtectedRoute />}>
         <Route path="/projects" element={<ProjectsPage />} />
-    
-        
         <Route path="/add-project" element={<ProjectFormPage />} />
         <Route path="/projects/:id" element={<ProjectFormPage />} />
-        
+        <Route path="/profile" element={<ProfilePage />} />
+        </Route>
       </Routes>
     </BrowserRouter>
     </ProjectProvider>
