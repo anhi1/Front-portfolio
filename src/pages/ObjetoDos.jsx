@@ -6,11 +6,24 @@ const ObjetoDos = () => {
     const mountRef = useRef(null);
 
     useEffect(() => {
-      
         const currentMount = mountRef.current;
         const scene = new THREE.Scene();
-        scene.background = new THREE.Color(0x2c2d30)
-        const camera = new THREE.PerspectiveCamera(50, currentMount.clientWidth / currentMount.clientHeight, 0.1, 1000);
+        scene.background = new THREE.Color(0xbc542b)
+
+         // Cargar textura de imagen PNG para la imagen encima
+         const textureLoader1 = new THREE.TextureLoader();
+         const texture = textureLoader1.load('public/punto1.svg');
+ 
+         // Crea un Mesh con un PlaneGeometry para la imagen encima
+         const geometryA = new THREE.PlaneGeometry(5, 5); // Ajusta el tamaño según sea necesario
+         const materialA = new THREE.MeshBasicMaterial({ map: texture, transparent: true }); // Aplica la textura al material y hazlo transparente
+         const imagePlane = new THREE.Mesh(geometryA, materialA);
+         scene.add(imagePlane);
+
+
+        
+        // camara
+        const camera = new THREE.PerspectiveCamera(80, currentMount.clientWidth / currentMount.clientHeight, 0.1, 1000);
         camera.position.z= 5
         scene.add(camera);
 
@@ -66,11 +79,13 @@ const ObjetoDos = () => {
         //render the escene
         const animate = () =>{
           controls.update()
-            renderer.render(scene, camera)
-            requestAnimationFrame(animate)
+          renderer.render(scene, camera)
+          requestAnimationFrame(animate)
         }
         animate()
         renderer.render(scene, camera)
+
+        
 
         //clean up the scene (para que no aparescan varios canvas)
         return() =>{
