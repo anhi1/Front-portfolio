@@ -20,6 +20,11 @@ days.extend(utc);
        </header>
        <p className="text-slate-500">{project.description}</p>
        <p>{days(project.date).utc().format("DD/MM/YYYY")}</p>
+
+       {project.imageUrl && (
+        <img src={project.imageUrl} alt="Project" className="w-full" />
+      )}
+
  
        <div className="flex gap-x-2 items-center">
          <button

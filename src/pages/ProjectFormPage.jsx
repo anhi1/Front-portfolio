@@ -22,7 +22,9 @@ function ProjectFormPage() {
          console.log(project);
          setValue('title', project.title)
          setValue('description', project.description)
+         setValue("imageUrl", project.imageUrl)
          setValue("date", dayjs(project.date).utc().format('YYYY-MM-DD'));
+         
 
        }
      }
@@ -82,6 +84,20 @@ function ProjectFormPage() {
             style={{ backgroundColor: '#EAEAEA' }}
           ></textarea>
         </div>
+
+        <div className="mb-4">
+          <label htmlFor="imageUrl" className="block text-gray-700 text-sm font-bold mb-2">ImageUrl</label>
+          <input
+          {...register("imageUrl")}
+            type="text"
+            id="ImageUrl"
+            placeholder="imageUrl"
+            className="w-full text-black px-4 py-2 rounded-md"
+            autoFocus
+            style={{ backgroundColor: '#EAEAEA' }}
+          />
+        </div>
+        
 
         <div className="mb-4">
         <label htmlFor="date">Date</label>
