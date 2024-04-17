@@ -28,6 +28,7 @@ Añadir en package.json "test": "vitest" y ejecutar npm run test
 npm install react-hook-form
 npm i axios
 npm i js-cookie
+npm install dayjs
 
 # instalacion three.js
 npm install three

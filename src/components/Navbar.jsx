@@ -5,6 +5,7 @@ import { useAuth } from "../context/AuthContext";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { isAuthenticated, logout, user } = useAuth();
+console.log(user);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -12,8 +13,7 @@ function Navbar() {
 
   return (
     <nav className="bg-white flex flex-col md:flex-row justify-between py-5 px-10">
-      <Link
-        to={isAuthenticated ? "/projects" : "/"}
+      <Link to={isAuthenticated ? "/projects":"/"}
         className="flex flex-col md:flex-row md:gap-x-4 mb-2"
       >
         <img
@@ -51,20 +51,10 @@ function Navbar() {
         
         {isAuthenticated? (
           <>
-            <li className="inline-flex items-center gap-x-2 text-sm font-medium rounded-lg mb-2">
-              <Link to="/projects">Proyectos</Link>
-            </li>
-            <br></br>
             <li>
-              
-            <Link
-                to="/add-project"
-                className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 mb-2"
-              >
+            <Link to="/add-project" className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 mb-2">
                 Agregar proyecto
             </Link>
-
-
             </li>
             <li>
               <Link
@@ -72,16 +62,11 @@ function Navbar() {
                 className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 mb-2"
                 onClick={() => {
                   logout();
-                }}
-              >
-                Logout
-              </Link>
+                }}>Logout</Link>
             </li>
           </>
         ) : (
           <>
-          
-
             <li className="inline-flex items-center gap-x-2 text-sm font-medium rounded-lg mb-2">
               <Link to="/contact">Contacto</Link>
             </li><br></br>
