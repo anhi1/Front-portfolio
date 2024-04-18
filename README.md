@@ -34,3 +34,20 @@ npm install dayjs
 npm install three
 npm install three stats.js
 
+
+# Imagenes
+
+### Registrado como admin
+
+![alt text](image.png)
+![alt text](image-1.png)
+
+### Editar CRUD
+![alt text](image-2.png)
+
+### Usuario registrado (token)
+![alt text](image-3.png)
+
+### Por completar
+- Definir roles
+- Visualización para los visitantes

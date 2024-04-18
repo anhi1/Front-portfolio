@@ -28,8 +28,6 @@ const ObjetoUno = () => {
         controls.enableDamping = true;
         controls.enableZoom = false; // Desactivar el zoom
 
-       
-
         
         const geometry = new THREE.BoxGeometry(1,1,1); // dimensiones x,y,z
         const material = new THREE.MeshPhongMaterial({ color: 0xeaeaea });
