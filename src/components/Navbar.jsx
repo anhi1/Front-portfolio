@@ -18,7 +18,7 @@ console.log(user);
       >
         <img
           className="inline-flex items-center"
-          src="public/logo.svg"
+          src="/logo.svg"
           style={{ width: "100px", height: "auto" }}
           alt="logo"
         />

@@ -13,7 +13,7 @@ const ObjetoDos = () => {
 
     // Cargar textura de imagen PNG para la imagen encima
     const textureLoader1 = new THREE.TextureLoader();
-    const texture = textureLoader1.load("public/punto1.svg");
+    const texture = textureLoader1.load("/punto1.svg");
 
     // Crea un Mesh con un PlaneGeometry para la imagen encima
     const geometryA = new THREE.PlaneGeometry(5, 5); // Ajusta el tamaño según sea necesario
