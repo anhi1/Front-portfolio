@@ -2,16 +2,13 @@
 ## Ejecutar
 npm run dev
 
-## Instalacion
+## Instalación
 npm create vite@latest
 
 ## ruteo
 npm i react-router-dom
 
-## Test
-npm install -D vitest
-npm i -D jsdom @testing-library/react
-Añadir en package.json "test": "vitest" y ejecutar npm run test
+
 
 ## Tailwind
 
@@ -24,18 +21,29 @@ Añadir en package.json "test": "vitest" y ejecutar npm run test
 - Ejemplo de componentes: https://tailwindcomponents.com/component/search-input
 
 
-## instalacion
+## Instalacion
 npm install react-hook-form
 npm i axios
 npm i js-cookie
 npm install dayjs
 
-# instalacion three.js
-npm install three
-npm install three stats.js
+#  Three.js
+- npm install three
+- npm install three stats.js
 
+# Test Cypress
+- npm install cypress --saved-dev
+- npx cypress open
+- npx cypress run --record --key PONERLACLAVE
 
-# Imagenes
+<img width="500" height="600"  src="image-4.png">
+
+## Otra opción de hacer Test
+npm install -D vitest
+npm i -D jsdom @testing-library/react
+Añadir en package.json "test": "vitest" y ejecutar npm run test
+
+# Imágenes
 
 ### Registrado como admin
 
