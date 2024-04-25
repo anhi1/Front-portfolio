@@ -59,3 +59,6 @@ Añadir en package.json "test": "vitest" y ejecutar npm run test
 ### Por completar
 - Definir roles
 - Visualización para los visitantes
+
+### Instalar 
+- npm install @tgwf/co2

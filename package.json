@@ -11,6 +11,7 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@tgwf/co2": "^0.14.4",
     "axios": "^1.6.8",
     "dayjs": "^1.11.10",
     "js-cookie": "^3.0.5",
