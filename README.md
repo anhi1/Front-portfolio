@@ -62,3 +62,7 @@ Añadir en package.json "test": "vitest" y ejecutar npm run test
 
 ### Instalar 
 - npm install @tgwf/co2
+
+
+
+![alt text](image-5.png)
