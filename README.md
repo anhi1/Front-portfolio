@@ -66,3 +66,29 @@ Añadir en package.json "test": "vitest" y ejecutar npm run test
 
 
 ![alt text](image-5.png)
+
+# Docker
+- npm run build
+- docker init
+
+- se crea automáticamente los siguinets archivos:  compose.yaml | README.Docker |dockerignore | Dockerfile
+
+- agregar en el package.json 
+"preview": "vite preview --host"
+
+
+Agregar en el Dokerfile :
+- ENV NODE_ENV development
+- COPY package*.json ./
+- RUN npm install
+
+  
+<!-- - creo el image : docker buildx build -t mi-imagen . -->
+- creo la image: docker build -t anhi1/mi-imagen .
+- Creo el contenedor con mi usuario: docker run -d -p 4173:4173 --name mi-contenedor anhi1/mi-imagen:latest
+- subir a hub docker: docker push anhi1/mi-imagen:latest
+<!-- - crear contenedor segun el puerto: docker run -p 4173:4173 mi-imagen -->
+
+- Imagenes (otra accion de acrear images)
+![alt text](image-5.png)
+![alt text](image-6.png)
